@@ -138,7 +138,74 @@ function reversFun(arg) {
                                 </div>
                             </div> `
     } else if (arg === 1) {
-        content.innerHTML = "fdgdjkfg";
+        content.innerHTML = ` <div>
+                                <div>
+                                    <h3>Базы данных</h3>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="revFun-divs">
+                                        <img src="img/b_newdb.png" alt="logo">
+                                    </div>
+                                    <div class="revFun-divs">
+                                        <div>Создать базу данных</div>
+                                    </div>
+                                    <div class="revFun-divs">
+                                        <img src="img/b_help.png" alt="logo">
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="revFun-divs">
+                                        <input type="text" placeholder="имя база данных">
+                                    </div>
+                                    <div class="revFun-divs">
+                                        <select>
+                                            <option value="utf-8.1">UTF-8.1</option>
+                                            <option value="utf-8.2">UTF-8.2</option>
+                                            <option value="utf-8.3">UTF-8.3</option>
+                                            <option value="utf-8.1" selected>UTF-8.3</option>
+                                        </select>
+                                    </div>
+                                    <div class="revFun-divs">
+                                        <button>Создать</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fil-div-h3"><h3>Фильтры</h3></div>
+                                    <div class="d-flex search-filt">
+                                        <div>
+                                            <div class="search-filt-div">Содержит слово: </div>
+                                        </div>
+                                        <div>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Age</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Jill</td>
+                                            <td>Smith</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Eve</td>
+                                            <td>Jackson</td>
+                                            <td>94</td>
+                                        </tr>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>80</td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                            </div>  `;
     } else {
         content.innerHTML = "db";
     }
@@ -271,7 +338,7 @@ for (let as in collObj) {
 
     for (let vs in collObj[as].title) {
 
-
+            console.log(vs);
         let divA = document.createElement("a");
         divA.setAttribute("href", "#demo" + (+vs+(+as)));
         divA.setAttribute("class", "btn btn-link last-toggle");

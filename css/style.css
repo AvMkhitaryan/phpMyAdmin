@@ -64,3 +64,9 @@ body {
 .demo-info{
     margin: 0 0 0 40px;
 }
+
+        /*revrite styles*/
+
+span.more{
+    cursor:pointer;
+}
