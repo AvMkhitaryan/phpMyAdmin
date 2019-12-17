@@ -1,0 +1,66 @@
+body {
+
+}
+
+#logo {
+    padding: 10px 3px 10px 15px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.recent-favorite {
+    font-size: 10px;
+}
+
+#left_navbar_db {
+    padding: 25px 1px 10px 1px;
+}
+
+
+#server-icon {
+    background: #888888;
+    color: white;
+    width: 100%;
+
+}
+
+.col10-nav-div {
+    width: 100%;
+}
+.nav-a-style{
+    font-size: 15px;
+    margin: 10px;
+}
+.col-divs {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px 0 0 0;
+}
+
+.h3-style {
+    background: #888888;
+    color: white;
+}
+
+.col-divs-Sel_Opt {
+    margin: 0px 0px 0px 10px;
+}
+
+.h3-big-div {
+    margin: 11px 0px 9px 10px;
+}
+
+.demo-class{
+    margin-left: 20px;
+}
+.border-left-db{
+    border: 1px solid black;
+}
+.last-toggle{
+    margin: 0px 0px 0px 20px;
+}
+.demo-info{
+    margin: 0 0 0 40px;
+}
