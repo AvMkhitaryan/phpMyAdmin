@@ -60,13 +60,48 @@ body {
 }
 .last-toggle{
     margin: 0px 0px 0px 20px;
+    border:1px solid black;
 }
 .demo-info{
     margin: 0 0 0 40px;
 }
+.first-demo{
 
-        /*revrite styles*/
+}
+.filse{
+    width: 100%;
+    margin: 20px;
+}
+#fld{
+    padding: 25px 15px 15px 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #eeeeee;
 
-span.more{
-    cursor:pointer;
+}
+#leg{
+    width: 100px;
+    border: 1px solid black;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#fld-input{
+    height: 22px;
+    margin: 0px 0px 0px 12px;
+}
+.tab{
+    border-collapse: collapse;
+    width: 70%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    font-size: 13px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.tr-first-td{
+    padding: 5px;
 }

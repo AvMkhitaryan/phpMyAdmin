@@ -1,0 +1,52 @@
+{
+  "myObjects": [
+    {
+      "name": "Базы данных",
+      "src": "img/s_db.png"
+    },
+    {
+      "name": "Sql",
+      "src": "img/b_sql.png"
+    },
+    {
+      "name": "Состояние",
+      "src": "img/s_status.png"
+    },
+    {
+      "name": "Учетные записи пользователей",
+      "src": "img/s_rights.png"
+    },
+    {
+      "name": "Экспорт",
+      "src": "img/b_export.png"
+    },
+    {
+      "name": "Импорт",
+      "src": "img/b_import.png"
+    },
+    {
+      "name": "Настройки",
+      "src": "img/b_tblops.png"
+    },
+    {
+      "name": "Репликация",
+      "src": "img/s_replication.png"
+    },
+    {
+      "name": "Переменные",
+      "src": "img/s_link.png"
+    },
+    {
+      "name": "Кодировки",
+      "src": "img/s_asci.png"
+    },
+    {
+      "name": "Типы таблиц",
+      "src": "img/b_engine.png"
+    },
+    {
+      "name": "Расширения",
+      "src": "img/b_plugin.png"
+    }
+  ]
+} 
