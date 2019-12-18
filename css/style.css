@@ -71,6 +71,7 @@ body {
 .filse{
     width: 100%;
     margin: 20px;
+    display: none;
 }
 #fld{
     padding: 25px 15px 15px 8px;
@@ -104,4 +105,14 @@ tr:nth-child(even) {
 }
 .tr-first-td{
     padding: 5px;
+}
+
+.col-7{
+    display: block;
+}
+.col-5{
+    display: block;
+}
+.create_db{
+    display: none;
 }

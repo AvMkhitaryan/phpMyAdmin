@@ -577,3 +577,79 @@
         //
         //     }
         // }
+
+        <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                #myDIV {
+                    width: 100%;
+                    padding: 50px 0;
+                    text-align: center;
+                    background-color: lightblue;
+                    margin-top: 20px;
+                }
+
+                #myDIV1 {
+                    width: 100%;
+                    padding: 50px 0;
+                    text-align: center;
+                    background-color: blue;
+                    margin-top: 20px;
+                    displey:none;
+                }
+
+                #myDIV2 {
+                    width: 100%;
+                    padding: 50px 0;
+                    text-align: center;
+                    background-color: black;
+                    margin-top: 20px;
+                    displey:none;
+                }
+            </style>
+        </head>
+        <body>
+
+        <p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+        <button onclick="myFunction(0)">Try it</button>
+        <button onclick="myFunction(1)">Try it</button>
+        <button onclick="myFunction(2)">Try it</button>
+
+        <div id="myDIV">
+            This is my DIV element.
+        </div>
+
+        <div id="myDIV1">
+            This is my DIV element.
+        </div>
+        <div id="myDIV2">
+            This is my DIV element.
+        </div>
+
+        <p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+
+        <script>
+            function myFunction(arg) {
+                var x = document.getElementById("myDIV");
+                var y = document.getElementById("myDIV1");
+                var z = document.getElementById("myDIV2");
+                if (arg === 0 ) {
+                    x.style.display = "block";
+                    y.style.display = "none";
+                    z.style.display = "none";
+                } else if(arg === 1) {
+                    x.style.display = "none";
+                    y.style.display = "block";
+                    z.style.display = "none";
+                }else{
+                    x.style.display = "none";
+                    y.style.display = "none";
+                    z.style.display = "block";
+                }
+            }
+        </script>
+
+        </body>
+        </html>
