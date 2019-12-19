@@ -44,6 +44,12 @@ body {
     color: white;
 }
 
+.col-7{
+    float:left;
+}
+.col-5{
+    float: right;
+}
 .col-divs-Sel_Opt {
     margin: 0px 0px 0px 10px;
 }
@@ -71,7 +77,7 @@ body {
 .filse{
     width: 100%;
     margin: 20px;
-    display: none;
+    /*display: none;*/
 }
 #fld{
     padding: 25px 15px 15px 8px;
@@ -106,13 +112,42 @@ tr:nth-child(even) {
 .tr-first-td{
     padding: 5px;
 }
+/*.toggle-div{*/
+/*    display: block;*/
+/*}*/
+/*.create_db{*/
+/*    display: none;*/
+/*}*/
 
-.col-7{
+#divnumberone{
     display: block;
 }
-.col-5{
-    display: block;
-}
-.create_db{
+#divnumbertwo{
     display: none;
+}
+#divnumbertree{
+    display: none;
+    width: 97%;
+}
+
+.create_db_h3_div{
+    margin: 20px;
+}
+.cr_db_dv_one{
+    margin: 20px;
+}
+.cr_db_dv_two{
+    margin: 20px;
+}
+.revFun-divs{
+    margin: 15px 10px 5px 0px;
+}
+#revFun-divs-select{
+    margin-top: 3px;
+}
+#revFun-divs-button{
+    border-radius: 5px;
+}
+.fil-div-h3{
+    margin: 20px;
 }

@@ -1,90 +1,94 @@
-let argone = document.getElementsByClassName("col-7");
-let argtwo = document.getElementsByClassName("col-5");
-let argthree = document.getElementsByClassName("create_db");
-let argfore = document.getElementsByClassName("filse");
-
-function reversFun(arg) {
-
-    let content = document.getElementById("revFun");
-
+function reversFun(arg, index) {
+    var x = document.getElementById("divnumberone");
+    var y = document.getElementById("divnumbertwo");
+    var z = document.getElementById("divnumbertree");
     if (arg === 0) {
-
-        argone.style.display = "block";
-        argtwo.style.display = "block";
-        argthree.style.display = "none";
-        argfore.style.display = "none";
-
+        x.style.display = "block";
+        y.style.display = "none";
+        z.style.display = "none";
     } else if (arg === 1) {
-
-        argone.style.display = "none";
-        argtwo.style.display = "none";
-        argthree.style.display = "block";
-        argfore.style.display = "none";
-
+        x.style.display = "none";
+        y.style.display = "block";
+        z.style.display = "none";
     } else {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "block";
 
-        argone.style.display = "none";
-        argtwo.style.display = "none";
-        argthree.style.display = "none";
-        argfore.style.display = "block";
+        let tableDb = document.querySelector("#fillse_table_tbody");
 
-        let tableDb = document.getElementsByClassName("tab");
+        let trone = document.createElement("tr");
+        tableDb.appendChild(trone);
 
-        for (let h in dbInfoObj) {
-            let trone = document.createElement("tr");
-            tableDb.appendChild(trone);
+        let troneTdone = document.createElement("td");
+        troneTdone.setAttribute("class", "tr-first-td");
+        trone.append(troneTdone);
 
-            let troneTdone = document.createElement("td");
-            troneTdone.setAttribute("class", "tr-first-td");
-            trone.appendChild(troneTdone);
+        let chekInput = document.createElement("input");
+        chekInput.setAttribute("type", "checkbox");
+        chekInput.setAttribute("name", "vehicle");
+        chekInput.setAttribute("value", "db");
+        troneTdone.innerHTML = dbInfoObj[index].tab;
+        troneTdone.appendChild(chekInput);
 
-            let chekInput = document.createElement("input");
-            chekInput.setAttribute("type", "checkbox");
-            chekInput.setAttribute("name", "vehicle");
-            chekInput.setAttribute("value", "db");
-            troneTdone.innerHTML = dbInfoObj[h].tab;
-            troneTdone.appendChild(chekInput);
+        let tdtwo = document.createElement("td");
+        trone.appendChild(tdtwo);
 
-            let tdtwo = document.createElement("td");
-            trone.appendChild(tdtwo);
+        let imgone = document.createElement("img");
+        imgone.setAttribute("src", "img/b_no_favorite.png");
+        imgone.setAttribute("alt", "star");
+        tdtwo.appendChild(imgone);
 
-            let imgone = document.createElement("img");
-            imgone.setAttribute("src", "img/b_no_favorite.png");
-            imgone.setAttribute("alt", "star");
-            tdtwo.appendChild(imgone);
+        let imgtwo = document.createElement("img");
+        imgtwo.setAttribute("src", "img/bd_browse.png");
+        imgtwo.setAttribute("alt", "overview");
+        tdtwo.appendChild(imgtwo);
 
-            let imgtwo = document.createElement("img");
-            imgtwo.setAttribute("src", "img/bd_browse.png");
-            imgtwo.setAttribute("alt", "overview");
-            tdtwo.appendChild(imgtwo);
+        let tedtwoA = document.createElement("a");
+        tedtwoA.setAttribute("href", "#");
+        tedtwoA.innerHTML = "Обзор";
+        tdtwo.appendChild(tedtwoA);
 
-            let tedtwoA = document.createElement("a");
-            tedtwoA.setAttribute("href", "#");
-            tedtwoA.innerHTML = "Обзор";
-            tdtwo.appendChild(tedtwoA);
+        let imgthree = document.createElement("img");
+        imgthree.setAttribute("src", "img/b_props.png");
+        imgthree.setAttribute("alt", "Structure");
+        tdtwo.appendChild(imgthree);
 
-            let imgthree = document.createElement("img");
-            imgthree.setAttribute("src", "img/b_props.png");
-            imgthree.setAttribute("alt", "Structure");
-            tdtwo.appendChild(imgthree);
+        let tedtwoAtwo = document.createElement("a");
+        tedtwoAtwo.setAttribute("href", "#");
+        tedtwoAtwo.innerHTML = "Структура";
+        tdtwo.appendChild(tedtwoAtwo);
 
-            let tedtwoAtwo = document.createElement("a");
-            tedtwoAtwo.setAttribute("href", "#");
-            tedtwoAtwo.innerHTML = "Структура";
-            tdtwo.appendChild(tedtwoAtwo);
+        let imgfore = document.createElement("img");
+        imgfore.setAttribute("src", "img/b_select.png");
+        imgfore.setAttribute("alt", "search");
+        tdtwo.appendChild(imgfore);
+        //
+        let aSerch = document.createElement("a");
+        aSerch.setAttribute("href", "#");
+        aSerch.innerHTML = "Структура";
+        tdtwo.appendChild(aSerch);
 
-            let imgfore = document.createElement("img");
-            imgfore.setAttribute("src", "img/b_select.png");
-            imgfore.setAttribute("alt", "search");
-            tdtwo.appendChild(imgfore);
+        let tdtree = document.createElement("td");
+        trone.appendChild(tdtree);
 
-            let aSerch = document.createElement("a");
-            aSerch.setAttribute("href", "#");
-            aSerch.innerHTML = "Структура";
-            tdtwo.appendChild(aSerch);
+        let par = document.createElement('a');
+        par.setAttribute("href", "#");
+        par.innerHTML = "~0";
+        tdtree.appendChild(par);
 
-        }
+        let tdtreeimg = document.createElement("img");
+        tdtreeimg.setAttribute("src", "img/b_help.png");
+        tdtreeimg.setAttribute("alt", "logo_for_help");
+        tdtree.appendChild(tdtreeimg);
 
+        let tdfore = document.createElement("td");
+        tdfore.innerHTML = dbInfoObj[index].tipe;
+        trone.appendChild(tdfore);
+
+        let tdfive = document.createElement("td");
+        tdfive.innerHTML = dbInfoObj[index].unicode;
+        trone.appendChild(tdfive);
     }
 }
 
@@ -135,6 +139,10 @@ $(document).ready(function () {
         data: 'collObj',
         dataType: 'json',
         success: function (data) {
+            for (let i = 0; i < data.length ; i++){
+                console.log(data[i]);
+            }
+
             let cdiv = document.getElementById("collapse-divs");
 
             for (let as in data.collObj) {
@@ -159,7 +167,7 @@ $(document).ready(function () {
 
                 let button = document.createElement("button");
                 button.setAttribute("class", "btn btn-link");
-                button.setAttribute("onclick", "reversFun(" + (+as + 2) + ")");
+                button.setAttribute("onclick", "reversFun(" + (+as + 2) + ", " + (+as) + ")");
                 button.innerHTML = data.collObj[as].nameone;
                 divone.appendChild(button);
 
