@@ -7,29 +7,127 @@ function reversFun(arg, index) {
         y.style.display = "none";
         z.style.display = "none";
     } else if (arg === 1) {
+        $('.remove_tb').remove();
         x.style.display = "none";
         y.style.display = "block";
         z.style.display = "none";
+
+        let oldDbTables = document.querySelector("#oldDbTables");
+
+
+        let createTable = document.createElement("table");
+        oldDbTables.appendChild(createTable);
+        createTable.setAttribute('class','remove_tb');
+
+            let first_tr = document.createElement("tr");
+            createTable.appendChild(first_tr);
+
+                let firstTrOne = document.createElement("th");
+                first_tr.appendChild(firstTrOne);
+
+                let firstTrTwo = document.createElement("th");
+                firstTrTwo.innerHTML = 'База данных';
+                first_tr.appendChild(firstTrTwo);
+
+                let firstTrThree = document.createElement("th");
+                firstTrThree.innerHTML = "Сравнение";
+                first_tr.appendChild(firstTrThree);
+
+                let firstTrFore = document.createElement("th");
+                firstTrFore.innerHTML = "Действие";
+                first_tr.appendChild(firstTrFore);
+
+                for (let k in createDbObjects){
+
+        let lasttr = document.createElement("tr");
+        createTable.appendChild(lasttr);
+
+                let lasttrOne = document.createElement("td");
+                lasttr.appendChild(lasttrOne);
+
+                        let lasttrOneinput = document.createElement("input");
+                        lasttrOneinput.setAttribute("type", "checkbox");
+                        lasttrOne.appendChild(lasttrOneinput);
+
+                let lasttrTwo = document.createElement("td");
+                lasttr.appendChild(lasttrTwo);
+
+                        let lasttrTwoA = document.createElement("a");
+                        lasttrTwoA.setAttribute("href", "#");
+                        lasttrTwoA.innerHTML = createDbObjects[k].name;
+                        lasttrTwo.appendChild(lasttrTwoA);
+
+                let lasttrThree = document.createElement("td");
+                lasttrThree.innerHTML = createDbObjects[k].leng;
+                lasttr.appendChild(lasttrThree);
+
+                let lasttrFore = document.createElement("td");
+                lasttr.appendChild(lasttrFore);
+
+                        let lasttrForeImg = document.createElement("img");
+                        lasttrForeImg.setAttribute("src", "img/s_rights.png");
+                        lasttrForeImg.setAttribute("alt", "logo");
+                        lasttrFore.appendChild(lasttrForeImg);
+
+                        let lasttrForeA = document.createElement("a");
+                        lasttrForeA.setAttribute("href", "#");
+                        lasttrForeA.innerHTML = "Проверить привилегии";
+                        lasttrFore.appendChild(lasttrForeA);
+                }
+                //
+
+        let trend=document.createElement("tr");
+        createTable.appendChild(trend);
+
+                let trendTdone=document.createElement("td");
+                trend.appendChild(trendTdone);
+
+                let trendTdtwo=document.createElement("td");
+                trendTdtwo.innerHTML="Всего:";
+                trend.appendChild(trendTdtwo);
+
+                let trendTdthree=document.createElement("td");
+                trendTdthree.innerHTML="latin1_swedish_ci";
+                trend.appendChild(trendTdthree);
+
+                let trendTdfore=document.createElement("td");
+                trend.appendChild(trendTdfore);
+
     } else {
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "block";
+        $('#fillse_table_tbody').remove();
 
-        let tableDb = document.querySelector("#fillse_table_tbody");
+        let dbid=document.querySelector("#divNumberTreeTableVariebl");
+
+        let tab_tbody=document.createElement("tbody");
+        tab_tbody.setAttribute("id","fillse_table_tbody");
+        dbid.appendChild(tab_tbody);
 
         let trone = document.createElement("tr");
-        tableDb.appendChild(trone);
+        tab_tbody.appendChild(trone);
 
-        let troneTdone = document.createElement("td");
-        troneTdone.setAttribute("class", "tr-first-td");
-        trone.append(troneTdone);
+        let tdchekit =document.createElement("td");
+        trone.appendChild(tdchekit);
 
         let chekInput = document.createElement("input");
         chekInput.setAttribute("type", "checkbox");
         chekInput.setAttribute("name", "vehicle");
         chekInput.setAttribute("value", "db");
+        tdchekit.appendChild(chekInput);
+
+        let troneTdone = document.createElement("td");
+        troneTdone.setAttribute("class", "tr-first-td");
         troneTdone.innerHTML = dbInfoObj[index].tab;
-        troneTdone.appendChild(chekInput);
+        trone.append(troneTdone);
+
+        // let chekInput = document.createElement("input");
+        // chekInput.setAttribute("type", "checkbox");
+        // chekInput.setAttribute("name", "vehicle");
+        // chekInput.setAttribute("value", "db");
+        // troneTdone.innerHTML = dbInfoObj[index].tab;
+        // troneTdone.appendChild(chekInput);
 
         let tdtwo = document.createElement("td");
         trone.appendChild(tdtwo);
@@ -92,6 +190,18 @@ function reversFun(arg, index) {
     }
 }
 
+let createDbObjects=[
+    {
+        name:"myfirstbazaone",
+        leng:"Utf_8_genereal_cli",
+    },
+    {
+        name:"myfirstbazatwo",
+        leng:"Utf_16_genereal",
+    }
+];
+
+
 let dbInfoObj = [
     {
         tab: "dt",
@@ -105,6 +215,15 @@ let dbInfoObj = [
     }
 
 ];
+
+function pushObject(){
+    var newObj={
+        "name":document.getElementById("revFun-divs-select").value,
+        "leng":document.getElementById("revFun-divs-select").value
+    };
+    createDbObjects.push(newObj);
+    console.log(createDbObjects);
+}
 
 
 $(document).ready(function () {
@@ -139,9 +258,9 @@ $(document).ready(function () {
         data: 'collObj',
         dataType: 'json',
         success: function (data) {
-            for (let i = 0; i < data.length ; i++){
-                console.log(data[i]);
-            }
+            // for (let i = 0; i < data.length ; i++){
+            //     console.log(data[i]);
+            // }
 
             let cdiv = document.getElementById("collapse-divs");
 
@@ -197,6 +316,7 @@ $(document).ready(function () {
                     divonea.appendChild(divtwo);
 
                     let paragraf = document.createElement("p");
+                    paragraf.setAttribute("class","paragraf-style");
                     paragraf.innerHTML = "text";
                     divtwo.appendChild(paragraf);
 

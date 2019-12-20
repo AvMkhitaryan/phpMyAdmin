@@ -25,7 +25,15 @@ body {
     width: 100%;
 
 }
+.col-2-style{
+    background: #e1e3e4;
+    height: 800px;
+}
 
+.paragraf-style{
+    background: #7f8182;
+    margin: 0px 46px 0 0;
+}
 .col10-nav-div {
     width: 100%;
 }
@@ -42,6 +50,9 @@ body {
 .h3-style {
     background: #888888;
     color: white;
+}
+.test1{
+    background: #c9c9c9;
 }
 
 .col-7{
@@ -98,7 +109,7 @@ body {
 }
 .tab{
     border-collapse: collapse;
-    width: 70%;
+    width: auto;
 }
 td, th {
     border: 1px solid #dddddd;
@@ -119,15 +130,18 @@ tr:nth-child(even) {
 /*    display: none;*/
 /*}*/
 
-#divnumberone{
-    display: block;
-}
+/*#divnumberone{*/
+/*    display: block;*/
+/*}*/
 #divnumbertwo{
     display: none;
 }
 #divnumbertree{
     display: none;
     width: 97%;
+}
+.remove_tb{
+    margin: 0px 0 0 20px;
 }
 
 .create_db_h3_div{
