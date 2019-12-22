@@ -7,7 +7,7 @@ function reversFun(arg, index) {
         y.style.display = "none";
         z.style.display = "none";
     } else if (arg === 1) {
-        $('.remove_tb').remove();
+        $('#remove_tb').remove();
         x.style.display = "none";
         y.style.display = "block";
         z.style.display = "none";
@@ -17,81 +17,81 @@ function reversFun(arg, index) {
 
         let createTable = document.createElement("table");
         oldDbTables.appendChild(createTable);
-        createTable.setAttribute('class','remove_tb');
+        createTable.setAttribute('id', 'remove_tb');
 
-            let first_tr = document.createElement("tr");
-            createTable.appendChild(first_tr);
+        let first_tr = document.createElement("tr");
+        createTable.appendChild(first_tr);
 
-                let firstTrOne = document.createElement("th");
-                first_tr.appendChild(firstTrOne);
+        let firstTrOne = document.createElement("th");
+        first_tr.appendChild(firstTrOne);
 
-                let firstTrTwo = document.createElement("th");
-                firstTrTwo.innerHTML = 'База данных';
-                first_tr.appendChild(firstTrTwo);
+        let firstTrTwo = document.createElement("th");
+        firstTrTwo.innerHTML = 'База данных';
+        first_tr.appendChild(firstTrTwo);
 
-                let firstTrThree = document.createElement("th");
-                firstTrThree.innerHTML = "Сравнение";
-                first_tr.appendChild(firstTrThree);
+        let firstTrThree = document.createElement("th");
+        firstTrThree.innerHTML = "Сравнение";
+        first_tr.appendChild(firstTrThree);
 
-                let firstTrFore = document.createElement("th");
-                firstTrFore.innerHTML = "Действие";
-                first_tr.appendChild(firstTrFore);
+        let firstTrFore = document.createElement("th");
+        firstTrFore.innerHTML = "Действие";
+        first_tr.appendChild(firstTrFore);
 
-                for (let k in createDbObjects){
+        for (let k in createDbObjects) {
 
-        let lasttr = document.createElement("tr");
-        createTable.appendChild(lasttr);
+            let lasttr = document.createElement("tr");
+            createTable.appendChild(lasttr);
 
-                let lasttrOne = document.createElement("td");
-                lasttr.appendChild(lasttrOne);
+            let lasttrOne = document.createElement("td");
+            lasttr.appendChild(lasttrOne);
 
-                        let lasttrOneinput = document.createElement("input");
-                        lasttrOneinput.setAttribute("type", "checkbox");
-                        lasttrOne.appendChild(lasttrOneinput);
+            let lasttrOneinput = document.createElement("input");
+            lasttrOneinput.setAttribute("type", "checkbox");
+            lasttrOne.appendChild(lasttrOneinput);
 
-                let lasttrTwo = document.createElement("td");
-                lasttr.appendChild(lasttrTwo);
+            let lasttrTwo = document.createElement("td");
+            lasttr.appendChild(lasttrTwo);
 
-                        let lasttrTwoA = document.createElement("a");
-                        lasttrTwoA.setAttribute("href", "#");
-                        lasttrTwoA.innerHTML = createDbObjects[k].name;
-                        lasttrTwo.appendChild(lasttrTwoA);
+            let lasttrTwoA = document.createElement("a");
+            lasttrTwoA.setAttribute("href", "#");
+            lasttrTwoA.innerHTML = createDbObjects[k].name;
+            lasttrTwo.appendChild(lasttrTwoA);
 
-                let lasttrThree = document.createElement("td");
-                lasttrThree.innerHTML = createDbObjects[k].leng;
-                lasttr.appendChild(lasttrThree);
+            let lasttrThree = document.createElement("td");
+            lasttrThree.innerHTML = createDbObjects[k].leng;
+            lasttr.appendChild(lasttrThree);
 
-                let lasttrFore = document.createElement("td");
-                lasttr.appendChild(lasttrFore);
+            let lasttrFore = document.createElement("td");
+            lasttr.appendChild(lasttrFore);
 
-                        let lasttrForeImg = document.createElement("img");
-                        lasttrForeImg.setAttribute("src", "img/s_rights.png");
-                        lasttrForeImg.setAttribute("alt", "logo");
-                        lasttrFore.appendChild(lasttrForeImg);
+            let lasttrForeImg = document.createElement("img");
+            lasttrForeImg.setAttribute("src", "img/s_rights.png");
+            lasttrForeImg.setAttribute("alt", "logo");
+            lasttrFore.appendChild(lasttrForeImg);
 
-                        let lasttrForeA = document.createElement("a");
-                        lasttrForeA.setAttribute("href", "#");
-                        lasttrForeA.innerHTML = "Проверить привилегии";
-                        lasttrFore.appendChild(lasttrForeA);
-                }
-                //
+            let lasttrForeA = document.createElement("a");
+            lasttrForeA.setAttribute("href", "#");
+            lasttrForeA.innerHTML = "Проверить привилегии";
+            lasttrFore.appendChild(lasttrForeA);
+        }
+        //
 
-        let trend=document.createElement("tr");
+        let trend = document.createElement("tr");
         createTable.appendChild(trend);
 
-                let trendTdone=document.createElement("td");
-                trend.appendChild(trendTdone);
+        let trendTdone = document.createElement("td");
+        trend.appendChild(trendTdone);
 
-                let trendTdtwo=document.createElement("td");
-                trendTdtwo.innerHTML="Всего:";
-                trend.appendChild(trendTdtwo);
+        let trendTdtwo = document.createElement("td");
+        trendTdtwo.innerHTML = "Всего:";
+        trend.appendChild(trendTdtwo);
 
-                let trendTdthree=document.createElement("td");
-                trendTdthree.innerHTML="latin1_swedish_ci";
-                trend.appendChild(trendTdthree);
+        let trendTdthree = document.createElement("td");
+        trendTdthree.innerHTML = "latin1_swedish_ci";
+        trend.appendChild(trendTdthree);
 
-                let trendTdfore=document.createElement("td");
-                trend.appendChild(trendTdfore);
+        let trendTdfore = document.createElement("td");
+        trend.appendChild(trendTdfore);
 
     } else {
         x.style.display = "none";
@@ -99,16 +99,16 @@ function reversFun(arg, index) {
         z.style.display = "block";
         $('#fillse_table_tbody').remove();
 
-        let dbid=document.querySelector("#divNumberTreeTableVariebl");
+        let dbid = document.querySelector("#divNumberTreeTableVariebl");
 
-        let tab_tbody=document.createElement("tbody");
-        tab_tbody.setAttribute("id","fillse_table_tbody");
+        let tab_tbody = document.createElement("tbody");
+        tab_tbody.setAttribute("id", "fillse_table_tbody");
         dbid.appendChild(tab_tbody);
 
         let trone = document.createElement("tr");
         tab_tbody.appendChild(trone);
 
-        let tdchekit =document.createElement("td");
+        let tdchekit = document.createElement("td");
         trone.appendChild(tdchekit);
 
         let chekInput = document.createElement("input");
@@ -190,14 +190,14 @@ function reversFun(arg, index) {
     }
 }
 
-let createDbObjects=[
+let createDbObjects = [
     {
-        name:"myfirstbazaone",
-        leng:"Utf_8_genereal_cli",
+        name: "myfirstbazaone",
+        leng: "Utf_8_genereal_cli",
     },
     {
-        name:"myfirstbazatwo",
-        leng:"Utf_16_genereal",
+        name: "myfirstbazatwo",
+        leng: "Utf_16_genereal",
     }
 ];
 
@@ -216,13 +216,31 @@ let dbInfoObj = [
 
 ];
 
-function pushObject(){
-    var newObj={
-        "name":document.getElementById("revFun-divs-select").value,
-        "leng":document.getElementById("revFun-divs-select").value
+function pushObject() {
+    let newObj = {
+        "name": document.getElementById("revFun-divs-select").value,
+        "leng": document.getElementById("revFun-divs-select1").value
     };
     createDbObjects.push(newObj);
-    console.log(createDbObjects);
+
+    var table = document.getElementById('remove_tb');
+
+    for (let i = 0; i <  createDbObjects.length; i++) {
+        var obj = createDbObjects[i];
+    }
+
+    var row = table.insertRow(1);
+
+    var checkboxObj = row.insertCell(0);
+    var nameObj = row.insertCell(1);
+    var lengObj = row.insertCell(2);
+    var cellEnd = row.insertCell(3);
+
+    checkboxObj.innerHTML = "<input type='checkbox'>";
+    nameObj.innerHTML = "<a href='#'>" + obj.name + "</a>";
+    lengObj.innerHTML = obj.leng;
+    cellEnd.innerHTML = "<img src='img/s_rights.png' alt='logo'><a href='#'>Проверить привилегии</a>";
+
 }
 
 
@@ -249,7 +267,7 @@ $(document).ready(function () {
                 a.innerHTML += data.myObjects[i].name;
             }
         }, error: function (error) {
-            console.log(error)
+            console.log(error);
         }
     });
 
