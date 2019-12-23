@@ -2,15 +2,19 @@ function reversFun(arg, index) {
     var x = document.getElementById("divnumberone");
     var y = document.getElementById("divnumbertwo");
     var z = document.getElementById("divnumbertree");
+    var h = document.getElementById("createTableDiv");
     if (arg === 0) {
         x.style.display = "block";
         y.style.display = "none";
         z.style.display = "none";
+        h.style.display = "none";
+
     } else if (arg === 1) {
         $('#remove_tb').remove();
         x.style.display = "none";
         y.style.display = "block";
         z.style.display = "none";
+        h.style.display = "none";
 
         let oldDbTables = document.querySelector("#oldDbTables");
 
@@ -97,6 +101,7 @@ function reversFun(arg, index) {
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "block";
+        h.style.display = "none";
         $('#fillse_table_tbody').remove();
 
         let dbid = document.querySelector("#divNumberTreeTableVariebl");
@@ -225,7 +230,7 @@ function pushObject() {
 
     var table = document.getElementById('remove_tb');
 
-    for (let i = 0; i <  createDbObjects.length; i++) {
+    for (let i = 0; i < createDbObjects.length; i++) {
         var obj = createDbObjects[i];
     }
 
@@ -241,8 +246,38 @@ function pushObject() {
     lengObj.innerHTML = obj.leng;
     cellEnd.innerHTML = "<img src='img/s_rights.png' alt='logo'><a href='#'>Проверить привилегии</a>";
 
+    let variable = document.getElementById("createTableDiv");
+    let allNumberTwoDiv = document.getElementById("divnumbertwo");
+
+    if (variable.style.display === "none") {
+        allNumberTwoDiv.style.display = "none";
+        variable.style.display = "block";
+    } else {
+        variable.style.display = "none";
+        allNumberTwoDiv.style.display = "block";
+    }
+
 }
 
+
+// $(document).on('click', '#revFun-divs-button', function (){
+//     let variable = document.getElementById("createTableDiv");
+//
+//     if (variable.style.display === "none"){
+//         console.log(1111);
+//         variable.style.display = "block";
+//     }else {
+//         variable.style.display = "none";
+//     }
+// });
+// function openNumberColumns(){
+//     let variable = document.getElementById("createTableDiv");
+//     if (variable.style.display === "none"){
+//         variable.style.display = "block";
+//     }else {
+//         variable.style.display = "none";
+//     }
+// }
 
 $(document).ready(function () {
     $.ajax({
@@ -334,7 +369,7 @@ $(document).ready(function () {
                     divonea.appendChild(divtwo);
 
                     let paragraf = document.createElement("p");
-                    paragraf.setAttribute("class","paragraf-style");
+                    paragraf.setAttribute("class", "paragraf-style");
                     paragraf.innerHTML = "text";
                     divtwo.appendChild(paragraf);
 

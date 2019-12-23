@@ -165,3 +165,136 @@ tr:nth-child(even) {
 .fil-div-h3{
     margin: 20px;
 }
+#createTableDiv{
+    width: 100%;
+    display: none;
+}
+.createTableDiv-field{
+    border: 1px solid black;
+    margin: 20px;
+    background: #eeeeee;
+}
+.createTableDiv-leg{
+    border: 1px solid black;
+    margin-left: 20px;
+    border-radius: 5px;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: white;
+}
+.createTable-div{
+    margin: 15px;
+}
+.createTable-div-but{
+    float: right;
+}
+.createTable-div-button{
+    margin: 0 15px 15px 0;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#divNumberFive{
+    width: 100%;
+}
+
+.howMatchTablePushInBigTab{
+    width: 680px;
+    padding: 6px 15px 0px 7px;
+    border-radius: 8px;
+}
+.howMatchTablePushInBigTab:hover{
+    background: #828282;
+}
+.structure-div-one{
+    background: #d4dce3;
+    margin: 9px 5px;
+}
+.structure-div-two{
+    text-align: center
+}
+#divNumberFive-tab-id{
+    margin: 0px 5px;
+}
+.tbody-h6{
+    font-size: 12px;
+}
+.tbody-check{
+    text-align: center;
+}
+.tbody-tr{
+
+}
+.tbody-tr:hover{
+    background: #b1dcf7;
+}
+#divNumberFive-none-input{
+    width: 93px;
+    display: none;
+}
+.tbody-ts-input-style{
+    height: 21px;
+}
+.divNumberFive-tab-tbody-td{
+    padding: 0px 5px 0 5px;
+}
+.chekit-style{
+    margin: 4px 0 0 0;
+}
+.Comment-comper-typeOfTable-firstDiv:hover{
+    background: #7f8182;
+}
+.Comment-comper-typeOfTable{
+    margin: 10px 0px 0px 5px;
+}
+.Comment-comper-typeOfTable-lastDiv{
+    background: #b9b9b9;
+    padding: 8px;
+}
+.Comment-comper-typeOfTable-lastDiv:hover{
+    background: #888888;
+}
+#Comment-comper-typeOfTable-lastDiv-inputId{
+    margin-right: 15px;
+    height: 25px;
+}
+.Comment-comper-typeOfTable-pTwo{
+    margin-left: 25px;
+}
+.Comment-comper-typeOfTable-pThree{
+    margin-left: 188px;
+}
+.Partition_Definition{
+    margin: 10px 0px 0px 5px;
+}
+.Partition_Definition_select{
+    margin: 11px 0px;
+    padding: 10px 0px 10px 5px;
+}
+.Partition_Definition_h6{
+    padding: 7px;
+}
+.Partition_Definition_h6:hover{
+    background: #828282;
+}
+.Partition_Definition_select:hover{
+    background: #828282;
+}
+.Partition_Definition_input{
+    margin: 11px 0px;
+    padding: 10px 0px 10px 5px;
+}
+.Partition_Definition_input:hover{
+    background: #828282;
+}
+.Partition_Definition_input_style{
+    margin-left: 10px;
+    height: 22px;
+    width: 153px;
+}
+.Partition_Definition_two_buttons_old{
+
+}
+.Partition_Definition_two_buttons-mDiv{
+    float: right;
+}
